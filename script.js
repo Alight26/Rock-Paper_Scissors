@@ -11,11 +11,11 @@ function getComputerChoice(max) {       // random # from 0 - 2
 let max = getComputerChoice(3);
 
 if (max == 0) {
-    max = "Rock";
+    max = "rock";
 } else if (max == 1) {
-    max = "Paper";
+    max = "paper";
 } else {
-    max = "Scissors";
+    max = "scissors";
 }
 
 console.log(max);
@@ -28,6 +28,25 @@ let choice = prompt("Rock, Paper, or Scissors: ");
 console.log(getHumanChoice(choice));
 
 function playRound(humanChoice, computerChoice) {
+    if (humanChoice == "rock" && computerChoice == "paper"){
+        computerScore += 1;
+        alert("You Lose!");
+    } else if (humanChoice == "rock" && computerChoice == "scissors"){
+        humanScore += 1;
+        alert("You Win!");
+    } else if (humanChoice == "rock" && computerChoice == "rock"){
+        alert("Tie!");
+    } else if (humanChoice == "paper" && computerChoice == "scissors"){
+        computerScore += 1;
+        alert("You Lose!");
+    } else if (humanChoice == "paper" && computerChoice == "paper"){
+        alert("Tie!");
+    } else if (humanChoice == "scissors" && computerChoice == "scissors"){
+        alert("Tie!")
+    } else {
+        alert("You can only choose rock, paper, or scissors!!");
+    }
+    }
 
 
 
