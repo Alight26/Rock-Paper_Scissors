@@ -19,3 +19,15 @@ function getComputerChoice(max) {
 }
 
 getComputerChoice(3); // declaring the function so it will pick only 3 numbers
+
+function getHumanChoice(choice) {
+
+    return choice;
+
+    
+}
+
+
+let choice = prompt("Rock, Paper, or Scissors:"); // user input
+choice = choice.trim().toLowerCase();
+console.log(getHumanChoice(choice));
