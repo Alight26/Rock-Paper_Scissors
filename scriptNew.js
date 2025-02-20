@@ -1,11 +1,16 @@
+// DOM stuff
+
+
+
+
 // scoreboard
 
 let computerScore = 0;
 let humanScore = 0;
 
-function playGame() {
+/*function playGame() {
     for (let i = 0; i < 5; i++) { // 5 rounds so loop runs the code 5 times
-        console.log(`round: ${i}`); // shows what round they are on.
+        console.log(`round: ${i}`); // shows what round they are on.*/
 
         function getComputerChoice(max) {
             let randomNumber = Math.floor(Math.random() * max); // chooses 0, 1, or 2
@@ -31,9 +36,28 @@ function playGame() {
     
             return choice;
         }
-    
-        let choice = prompt("Rock, Paper, or Scissors:"); // user input
-        choice = choice.trim().toLowerCase();
+        
+        const choice = document.createElement("div"); //  creates the div for the buttons
+
+        const rock = document.createElement("button");
+        rock.textContent = "Rock";
+        choice.appendChild(rock);
+
+        const paper = document.createElement("button");
+        paper.textContent = "Paper";
+        choice.appendChild(paper);
+
+        const scissors = document.createElement("button");
+        scissors.textContent = "Scissors";
+        choice.appendChild(scissors);
+
+        document.body.appendChild(choice);
+       
+
+
+        
+        //let choice = prompt("Rock, Paper, or Scissors:"); // user input
+        //choice = choice.trim().toLowerCase();
         console.log(getHumanChoice(choice));
     
         let humanChoice = getHumanChoice(choice);
@@ -63,10 +87,10 @@ function playGame() {
         console.log(`Opponent Score ${computerScore}`);
 
 
-    }
+/*    }
 
    
 
 }
 
-playGame();
+playGame(); */
