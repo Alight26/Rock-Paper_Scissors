@@ -32,35 +32,40 @@ let humanScore = 0;
         let computerChoice = getComputerChoice(3); // declaring the function so it will pick only 3 numbers
     
     
-        function getHumanChoice(choice) {
+        function getHumanChoice() {
+
+            const rock = document.querySelector("#rock"); 
+            rock.addEventListener("click", () => {
+                //alert("Rock");
+                console.log("rock");
+            })
+
+            const paper = document.querySelector("#paper");
+            paper.addEventListener("click", () => {
+                console.log("paper");
+            })
+
+            const scissors = document.querySelector("#scissors");
+            scissors.addEventListener("click", () => {
+                console.log("scissors");
+            })
+
     
-            return choice;
         }
         
-        const choice = document.createElement("div"); //  creates the div for the buttons
 
-        const rock = document.createElement("button");
-        rock.textContent = "Rock";
-        choice.appendChild(rock);
 
-        const paper = document.createElement("button");
-        paper.textContent = "Paper";
-        choice.appendChild(paper);
 
-        const scissors = document.createElement("button");
-        scissors.textContent = "Scissors";
-        choice.appendChild(scissors);
 
-        document.body.appendChild(choice);
+
        
-
 
         
         //let choice = prompt("Rock, Paper, or Scissors:"); // user input
         //choice = choice.trim().toLowerCase();
-        console.log(getHumanChoice(choice));
+        //console.log(getHumanChoice(choice));
     
-        let humanChoice = getHumanChoice(choice);
+        let humanChoice = getHumanChoice();
     
         // rock paper scissors game logic
         function playRound(humanChoice, computerChoice) {
